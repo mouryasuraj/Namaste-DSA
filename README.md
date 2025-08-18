@@ -1,1 +1,1 @@
-# Learning DSA from the best, [Akshay Saini.](https://www.linkedin.com/in/akshaymarch7/?originalSubdomain=in)
+# Persuing DSA with [Akshay Saini](https://www.linkedin.com/in/akshaymarch7/?originalSubdomain=in), one of the best educators.
