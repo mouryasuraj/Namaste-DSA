@@ -1,6 +1,6 @@
 /*
 
-Time Complexity - It is used to measure the algorithm running time as the input grows
+Time Complexity - It is used to measure the algorithm's running time as the input grows.
 
 1. Time Complexity !== Time taken
 2. To represent time complexity we use Big O notation
@@ -19,7 +19,7 @@ Time Complexity - It is used to measure the algorithm running time as the input 
 
 Space Complexity - Space complexity refers to how much extra memory algorithm uses.
 
-1. If variable is fixed and constants(countable) then space complexity will be O(1), if we don't use any data structure like array
+1. If variable is fixed and constants or countable then space complexity will be O(1), if we don't use any data structure like array
 2. We ignore the smallest value:
     a. O(2n) ==> O(n)
     b. O(n2+n) ==> O(n)
