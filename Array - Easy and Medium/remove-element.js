@@ -27,5 +27,8 @@ function removeElement(nums, val){
     return x
 }
 
+// Time Complexity = O(n)
+// Space Complexity = O(1)
+
 const result = removeElement(nums, val)
 console.log(result)
