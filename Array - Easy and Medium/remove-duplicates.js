@@ -10,6 +10,8 @@ function removeDuplicates(nums){
     }
     return x+1
 }
+// Time Complexity = O(n)
+// Space Complexity = O(1)
 
 const result = removeDuplicates(nums)
 console.log(result);
