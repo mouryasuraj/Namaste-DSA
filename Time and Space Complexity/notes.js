@@ -51,4 +51,31 @@ Space Complexity:
         O(2n) ==> Ingnore 2
 3. If the variable is fixed or constant(countable) then the space complexity of an algorithm will be O(1), if no data structure used.
 
+
+
+
+// Big O Notation
+1. Take an example of Linear Search and Binary Search
+2. Which one is faster, run both program and measure the time.
+3. But actual time depends on 
+    1. CPU
+    2. RAM
+    3. Programming Language
+    etc
+4. So measuring efficiency in seconds isn't reliable
+5. We need a way to compare alogrithms independent of machines
+6. That is where BIg O notation come into picture
+7. It calulate the efficiency based on input, so if input grows how much time or iterations it will take.
+8. We measure the Big O in worst case.
+
+
+
+// Why we ignore constant or smaller value from BigO
+
+Suppose, 
+O(n square) and O(3n)
+if n = 10, then O(nsqaure) = 100 and O(3n) = 3*10 = 30 but as input grows then it doesn't matter because it will be very small value
+n=100, then O(nsqaure) = 10000 and O(3n) = 3*10 = 300 --> 300 is smaller than 10k
+n = 1mil, then O(nsqaure) = 1mil sqaure and O(3n) = 3*1mil = 3mil --> 3mil is very smaller than 1mil square
+
 */
