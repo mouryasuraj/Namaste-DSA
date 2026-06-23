@@ -1,12 +1,17 @@
-// Q. 27 - Remove Element 
+/*
+Q. 27 - Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+
+
+// Question breakdown
+1. Integer array = num = []
+2. integar val = 
 
 
 //Approach
-/*
 
 1. We have to use two pointer method.
 2. First pointer will track the last element which was equal and then we will replace that element with equal one, by doing this, we will successfull remove the val from the array
-3. We will initial x to index 0 by default
+3. We will initialize x to index 0 by default
 4. we will check using i and if nums[i]!==val then we will replace the value to nums[x] = nums[i] and then will increment x by 1. if its equal then don't change the position
 5. After the loops end the value of x will be the elemest which is not equal to the val
 

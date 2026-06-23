@@ -57,29 +57,68 @@
 // console.log(findSmalletElement())
 
 
-const array = [52,34,777,859,1,885,2,506]
+// const array = [52,34,777,859,1,885,2,506]
 
-function findSecondLargestElem(){
-    let largest = -Infinity
-    let secLargest = -Infinity
+// function findSecondLargestElem(){
+//     let largest = -Infinity
+//     let secLargest = -Infinity
 
-    for (let i = 0; i < array.length; i++) {
-        if(array[i]>largest){
-            secLargest = largest
-            largest = array[i]
-        }else if(array[i]>secLargest){
-            secLargest = array[i]
-        }   
+//     for (let i = 0; i < array.length; i++) {
+//         if(array[i]>largest){
+//             secLargest = largest
+//             largest = array[i]
+//         }else if(array[i]>secLargest){
+//             secLargest = array[i]
+//         }   
+//     }
+//     return secLargest
+// }
+
+// // console.log(findSecondLargestElem())
+
+// let count = 1
+// for (let i = 0; i < 3; i++) {
+//     for (let j = 0; j < i; j++) {
+//         console.log("1", count);
+//         count++
+//     }
+// }
+
+
+
+//26. Remove Duplicate from sorted array
+
+// const int = [0,0,1,1,1,2,2,3,3,4,4,4,4,4]
+
+// const removeDuplicates = (int) =>{
+//     let x = 0;
+
+//     for(let i=0; i<int.length; i++){
+//         if(int[i]>int[x]){
+//             x++;
+//             int[x] = int[i]
+//         }
+//     }
+//     console.log(int)
+//     console.log(x+1)
+// }
+
+// const result = removeDuplicates(int)
+
+// 27 - Remove occurence element
+
+const nums = [0,4,1,4,1,2,4,3,3]
+const val = 4
+
+const removeElement = () =>{
+    let x = 0;   // First Pointer "x" to track and replace the element
+    for(let i=0; i< nums.length; i++){  //Second pointer "i" to check each element equal or not
+        if(nums[i]!==val){
+            nums[x] = nums[i]
+            x++;
+        }
     }
-    return secLargest
+    console.log(x)
 }
 
-// console.log(findSecondLargestElem())
-
-let count = 1
-for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < i; j++) {
-        console.log("1", count);
-        count++
-    }
-}
+removeElement()
