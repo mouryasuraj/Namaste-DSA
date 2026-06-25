@@ -1,3 +1,15 @@
+/*
+344. Reverse String --> Write a function that reverses a string. The input string is given as an array of characters s.
+You must do this by modifying the input array in-place with O(1) extra memory.
+
+// Break Question
+1. s is an array of character
+2. in place means --> modify the existing array
+3. with O(1) extra memory --> without creating extra array or memory
+
+ 
+*/
+
 
 // My Approach
 // const s = ["H","a","w","q","c","w"]

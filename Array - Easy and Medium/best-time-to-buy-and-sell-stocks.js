@@ -9,7 +9,8 @@
     c. will check
         if(price[i]<minPrice){
             minPrice = price[i]
-        }else if(price[i] - minPrice > maxProfit){
+        }
+        if(price[i] - minPrice > maxProfit){
                 maxProfit = price[i]
         }
 3. starting i from 1 because we can't buy and sell the stock on the same day
@@ -22,7 +23,7 @@ function buyAndSellStock (prices) {
     let minPrice = prices[0]
     let maxProfit=0;
 
-    for(let i=0; i<prices.length; i++){
+    for(let i=1; i<prices.length; i++){
         if(prices[i]<minPrice){
             minPrice = prices[i]
         }
