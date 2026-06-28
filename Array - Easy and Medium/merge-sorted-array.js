@@ -10,19 +10,22 @@
 
 
 // 1st approach
-// const nums1 = [1,2,3] // length of nums1 will always be m+n
-// const nums2 = [2,5,6]
+const nums1 = [1,2,3] // length of nums1 will always be m+n
+const nums2 = [2,5,6]
 
-// const mergeSortedArray = () =>{
-//     const num2len = nums2.length;
-//     for(let i=num2len; i<nums1.length; i++){
-//         nums1[i] = nums2[i-num2len]
-//     }
-//     console.log(nums1)
-//     console.log(nums1.sort())
-// } 
+const mergeSortedArray = () =>{
+    // Native approach using sort function
 
-// mergeSortedArray()
+    // TIme Complexity --> O(n) + O(m+n log(m+n)) => O(m+n) log (m+n); 
+    // Space Complexity --> O(m+n) ==>sort function take temporary memory to sort the array. ; 
+    for(let i=0; i<nums2.length; i++){
+    nums1[m+i] = nums2[i]
+
+   }
+   nums1.sort((a, b) => a-b)
+} 
+
+mergeSortedArray()
 
 
 // 2nd approach

@@ -86,39 +86,21 @@
 
 
 
-//26. Remove Duplicate from sorted array
+const nums1 = [1,2,3,0,0,0] // length of nums1 will always be m+n
+const nums2 = [2,5,6]
+const m = 3;
+const n = 3;
 
-// const int = [0,0,1,1,1,2,2,3,3,4,4,4,4,4]
+const mergeSortedArray = () =>{
+   // Native approach using sort function
 
-// const removeDuplicates = (int) =>{
-//     let x = 0;
+    // TIme Complexity --> O(n) + O(m+n log(m+n)) => O(m+n) log (m+n); 
+    // Space Complexity --> O(m+n) ==>sort function take temporary memory to sort the array. ; 
+    for(let i=0; i<nums2.length; i++){
+    nums1[m+i] = nums2[i]
 
-//     for(let i=0; i<int.length; i++){
-//         if(int[i]>int[x]){
-//             x++;
-//             int[x] = int[i]
-//         }
-//     }
-//     console.log(int)
-//     console.log(x+1)
-// }
+   }
+   nums1.sort((a, b) => a-b)
+} 
 
-// const result = removeDuplicates(int)
-
-// 27 - Remove occurence element
-
-const nums = [0,4,1,4,1,2,4,3,3]
-const val = 4
-
-const removeElement = () =>{
-    let x = 0;   // First Pointer "x" to track and replace the element
-    for(let i=0; i< nums.length; i++){  //Second pointer "i" to check each element equal or not
-        if(nums[i]!==val){
-            nums[x] = nums[i]
-            x++;
-        }
-    }
-    console.log(x)
-}
-
-removeElement()
+mergeSortedArray()
