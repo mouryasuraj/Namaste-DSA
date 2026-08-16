@@ -1,6 +1,9 @@
 // Factorial using Recursion
 
 
+
+// Time Complexity = O(n)
+// Space Complexity = O(n)
 const findFactorial = (n) =>{
     if(n===1) return 1;
 
