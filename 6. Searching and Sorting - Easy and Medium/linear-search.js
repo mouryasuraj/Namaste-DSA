@@ -10,9 +10,7 @@
 
 */
 
-const arr = [1,2,5,7,0,4,3]
-const tar = 0
-
+c
 // Time Complexity - O(n)
 // Space Complexity - O(1)
 const linerSearch = (arr, tar) =>{
