@@ -1,34 +1,64 @@
 // 704 - Binary Search
 
 
-const arr = [1,4,6,8,9,11,45,78]
-const tar = 1
+const arr = [1,4]
+const tar = 4
+
+// Time Complexity --> 
+// Space Complexity --> O(1)
+
+// const binarySearch = (arr, tar) =>{
+
+//     let p1 = 0
+//     let p2 = arr.length-1
+
+//     for(let i=0; i<arr.length; i++){
+
+//         //if(p1>p2) //return -1   // this is the base condition to terminate from the loop, because at this point we know that the element does not exist in the array, so looping futher will not help.
+        
+//         const mid = Math.floor((p1+p2)/2)
+         
+//         if(arr[mid]===tar) return mid
+
+//         if(p1===p2) return -1 // This is also an base condition
+
+//         if(arr[mid]<tar){
+//             p1 = mid + 1
+//         }else{
+//             p2 = mid - 1
+//         }
+
+//     }
+
+//     return -1
+// }
 
 
 
-// Tried to solve the Binary search question
-
+// Using While loop
 const binarySearch = (arr, tar) =>{
 
-    let arrLen = arr.length
+    let p1 = 0
+    let p2 = arr.length-1
 
-
-    for(let i=0; i<arrLen; i++){
-
-        let halfLen = Math.floor(arr.length/2)
+    while(p2>p1){
         
-        if(arr[halfLen]===tar) {
-            return halfLen
-        }
-        else if(arr[halfLen]>tar){
-            arr.splice(halfLen+1)
+        const mid = Math.floor((p1+p2)/2)
+         
+        if(arr[mid]===tar) return mid
+
+        if(arr[mid]<tar){
+            p1 = mid + 1
         }else{
-            arr.splice(0,halfLen)
+            p2 = mid - 1
         }
-        
-        if(halfLen===0) return -1
+
     }
+
+    if(arr[p1]===tar) return p1
+
     return -1
 }
+
 
 console.log(binarySearch(arr, tar))
