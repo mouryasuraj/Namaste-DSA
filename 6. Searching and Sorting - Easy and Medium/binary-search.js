@@ -4,7 +4,7 @@
 const arr = [1,4]
 const tar = 4
 
-// Time Complexity --> 
+// Time Complexity --> O(log n) 
 // Space Complexity --> O(1)
 
 // const binarySearch = (arr, tar) =>{
@@ -41,7 +41,7 @@ const binarySearch = (arr, tar) =>{
     let p1 = 0
     let p2 = arr.length-1
 
-    while(p2>p1){
+    while(p2>=p1){
         
         const mid = Math.floor((p1+p2)/2)
          
@@ -54,8 +54,6 @@ const binarySearch = (arr, tar) =>{
         }
 
     }
-
-    if(arr[p1]===tar) return p1
 
     return -1
 }
