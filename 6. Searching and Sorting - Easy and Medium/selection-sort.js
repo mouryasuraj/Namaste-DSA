@@ -40,4 +40,49 @@ const selectionSort = (arr) =>{
 
 }
 
-console.log(selectionSort(arr))
+// console.log(selectionSort(arr))
+
+
+
+// Optimzed Approach - 
+/*
+What I improved from my initial approach:
+
+1. In the initial approach, I tracked both the minimum element and its position.
+   However, we only need to track the position (index) of the minimum element.
+2. Since I was tracking both the element and its position, I also used an
+   `isPosChanged` flag to determine whether a swap was required.
+3. In the optimized approach, I only track the index of the minimum element
+   and use that index directly while swapping.
+4. I also added a condition to check whether the current index and the
+   minimum element's index are the same. If they are the same, no swap is required.
+*/ 
+const optSelectionSort = (a) =>{
+
+    const n = a.length
+
+    for (let i = 0; i < n-1; i++) {
+        
+        let min = i
+        
+        for (let j = i+1; j < n; j++) {
+            
+            if(arr[j]<arr[min]){
+                min = j
+            }
+        }
+
+        if(i!==min){
+            let temp = arr[i]
+            arr[i] = arr[min];
+            arr[min] = temp
+        }
+        
+    }
+
+    return arr
+
+}
+
+console.log(optSelectionSort(arr))
+
