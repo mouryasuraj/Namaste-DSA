@@ -63,4 +63,26 @@ const insertionSort1 = (a) =>{
     return a
 } 
 
-console.log(insertionSort1([4,2,6,1,5,0,8,9]))
+// console.log(insertionSort1([1, 2, 3, 4, 5, 6]))
+
+
+
+// sort an portion of an array with insertion sort
+const SortAPortion = (a, s, e) =>{
+
+    for (let i = s+1; i < e+1; i++) {
+       
+        let curr = a[i]
+        let p = i - 1
+
+        while(p>=s && a[p] > curr){
+            a[p+1] = a[p]
+            p--
+        }
+        a[p+1] = curr
+        
+    }
+    return a
+}
+
+console.log(SortAPortion([9, 7, 5, 3, 8, 2, 6, 1], 2, 6))
