@@ -38,5 +38,29 @@ const InsertionSort = (a) =>{
 }
 
 
-console.log(InsertionSort(arr))
+// console.log(InsertionSort(arr))
 
+
+
+
+// [4,2,6,1,5,0,8,9]
+// Right approach
+const insertionSort1 = (a) =>{
+    const n = a.length;
+    
+    for (let i = 1; i < n; i++) { 
+
+        let curr = a[i]
+        let p = i - 1;
+
+        while(p >=0  && a[p] > curr){
+            a[p+1] = a[p]
+            p--
+        }
+        a[p+1] = curr
+    }
+
+    return a
+} 
+
+console.log(insertionSort1([4,2,6,1,5,0,8,9]))
