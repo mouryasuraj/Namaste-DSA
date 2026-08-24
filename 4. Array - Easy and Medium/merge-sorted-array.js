@@ -70,28 +70,28 @@ mergeSortedArray()
 
 // Tried 2nd Correct Approach
 
-const nums1 = [2,7,10,0,0,0]
+// const nums1 = [2,7,10,0,0,0]
 
-const nums2 = [1,2,3]
-const m = 3
-const n = 3
+// const nums2 = [1,2,3]
+// const m = 3
+// const n = 3
 
-const mergeSortedArray = () =>{
-    const cp = nums1.slice(0,m);
-    let p1=0;
-    let p2=0;
+// const mergeSortedArray = () =>{
+//     const cp = nums1.slice(0,m);
+//     let p1=0;
+//     let p2=0;
 
-    for(let i=0; i<m+n; i++){
+//     for(let i=0; i<m+n; i++){
 
-        if(p2>=n || (p1<m && cp[p1]<nums2[p2])){
-            nums1[i] = cp[p1];
-            p1++
-        }else{
-            nums1[i] = nums2[p2];
-            p2++
-        }
-    }
-}
+//         if(p2>=n || (p1<m && cp[p1]<nums2[p2])){
+//             nums1[i] = cp[p1];
+//             p1++
+//         }else{
+//             nums1[i] = nums2[p2];
+//             p2++
+//         }
+//     }
+// }
 
 // Time complexity --> O(m+n)
 // Space complexity = O(n)  // used extra memory
