@@ -20,11 +20,11 @@ MyLinkedList.prototype.addAtHead = function(val){
 
 MyLinkedList.prototype.deleteAtIndex = function(index){
 
-    if(index<0 || index>this.size-1) return -1
+    if(index<0 || index>this.size-1) return
     let curr = this.head
 
     if(index===0){
-        this.head = curr.next
+        this.head = this.head.next
         this.size--
         return
     }
@@ -32,11 +32,8 @@ MyLinkedList.prototype.deleteAtIndex = function(index){
     for (let i = 0; i < index-1; i++) {
         curr = curr.next
     }
-    if(index===this.size-1){
-        curr.next = null
-    }else{
-        curr.next = curr.next.next
-    }
+    
+    curr.next = curr.next.next
     this.size--
 }
 
@@ -54,22 +51,25 @@ MyLinkedList.prototype.get = function(index){
 // index = 2, val = 1
 MyLinkedList.prototype.addAtIndex = function(index,val){
 
-    if(index>this.size-1) return 
+    if(index<0 || index>=this.size) return 
 
     let newNode = new Node(val)
     let curr = this.head
 
     if(index===0){
         this.addAtHead(val)
-    }else if(index===this.size){
+        return
+    }
+    if(index===this.size){
         this.addAtTail(val)
-    }else{
+        return
+    }
+
         for (let i = 0; i < index-1; i++) {
            curr = curr.next
         }
         newNode.next = curr.next
         curr.next = newNode
-    }
 
     this.size++
 }
