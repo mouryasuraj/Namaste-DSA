@@ -2,7 +2,7 @@
 
 // -----------Tried------------
 
-const arr  = [5,2,4,1,0,3,6,9,8]
+// const arr  = [5,2,4,1,0,3,6,9,8]
 
 const bubbleSort = (arr) =>{
 
@@ -59,6 +59,8 @@ const bubbleSort2 = (arr) =>{
 
 // Little optimized way by adding is Swap 
 
+
+const arr  = [5,2,4,1,0,3,6,9,8]
 
 const bubbleSort3 = (arr) =>{
 

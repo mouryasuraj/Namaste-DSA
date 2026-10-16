@@ -25,7 +25,9 @@ function removeElement(nums, val){
     let x = 0;   // First Pointer "x" to track and replace the element
     for(let i=0; i< nums.length; i++){  //Second pointer "i" to check each element equal or not
         if(nums[i]!==val){
-            nums[x] = nums[i]
+            if(x!==i){
+                nums[x] = nums[i]
+            }
             x++;
         }
     }
