@@ -1,3 +1,33 @@
+/*
+
+
+
+Approach to solve this question
+
+1. Iteraion
+    a. Maintain a sentinel node that points to head
+    b. make head as curr
+    c. make head.next as next
+    d. prev should be sentinel node
+    e. Iterate through the linked list till curr && next is not null
+    f. shif the nodes and move curr, next and prev properly to swap other pairs as well
+    g. add edge cases if head or head.next is not present just return head
+
+2. Recursion
+    a. create left and right variable and assigned head and head.next respectively
+    b. add base condition to break the recursion when head or head.next is null
+    c. point left.next to swapped list --> swap(right.next) --> pass new head from pairs which needs to swap
+    d. point right.next to backward which is left
+    e. return right
+
+
+
+*/
+
+
+
+
+
 function ListNode(val, next) {
   this.val = val === undefined ? 0 : val;
   this.next = next === undefined ? null : next;
