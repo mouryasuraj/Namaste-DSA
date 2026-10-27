@@ -20,7 +20,7 @@ var lengthOfLastWord = function(s) {
     // Space Complexity --> O(1)
 };
 
-console.log(lengthOfLastWord(s))
+// console.log(lengthOfLastWord(s))
 
 
 
@@ -35,7 +35,7 @@ const lengthOfLastWord1 = (s) =>{
     // Space Complexity --> O(n)
 }
 
-console.log(lengthOfLastWord1(s))
+// console.log(lengthOfLastWord1(s))
 
 
 // another way
@@ -59,4 +59,24 @@ const lengthOfLastWord2 = (s) =>{
     // Space Complexity --> O(1)
 }
 
-console.log(lengthOfLastWord2("   Suraj   Moquryea   "))
+// console.log(lengthOfLastWord2("   Suraj   Moquryea   "))
+
+
+
+const lengthOfLastWord3 = (s) =>{
+    let count = 0
+
+    let n = s.length-1
+
+    while(n>=0){
+        if(s[n]===" " && count>0) break;
+
+        if(s[n]!==" "){
+            count++
+        }
+        n--
+    }
+    return count
+}
+
+console.log(lengthOfLastWord3("   Suraj   Moquryea   "))
