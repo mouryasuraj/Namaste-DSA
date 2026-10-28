@@ -47,3 +47,25 @@ const findTargetIndices = (nums, target) => {
 
 
 console.log(findTargetIndices([3,2,5,7,1,6,1],2))
+
+
+// Better approach 
+
+
+const findTargetIndices1 = (nums, target) =>{
+    let smaller = 0;
+    let equal = 0;
+
+    for (const elem of nums) {
+        if(elem<target) smaller++
+        else if(elem===target) equal++;
+    }
+
+    return Array.from(
+        {
+            length:equal
+        },
+        (_,i)=> smaller+i
+    )
+}
+console.log(findTargetIndices1([3,2,5,7,1,6,1],1))
